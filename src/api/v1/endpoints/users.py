@@ -5,10 +5,7 @@ from src.database.database import get_session
 from src.schemas.users import *
 
 
-router = APIRouter(
-    prefix='/users'
-)
-router.include_router()
+router = APIRouter()
 
 @router.post('/create')
 async def create_user(user: UserSchema, session: AsyncSession = Depends(get_session)):

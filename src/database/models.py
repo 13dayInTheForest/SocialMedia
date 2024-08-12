@@ -1,5 +1,5 @@
 from sqlalchemy import ForeignKey, String, Integer, DateTime, Boolean, Float
-from sqlalchemy.orm import Mapped, mapped_column,DeclarativeBase
+from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase
 from sqlalchemy.sql import func
 
 
@@ -20,6 +20,7 @@ class Users(Base):
     password: Mapped[str] = mapped_column(String)
     bio: Mapped[str] = mapped_column(String(300))
     superuser: Mapped[bool] = mapped_column(Boolean, default=False)
+    authorized: Mapped[bool] = mapped_column(Boolean, default=False)
     register_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
 
 

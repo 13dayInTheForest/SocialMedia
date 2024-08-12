@@ -3,11 +3,12 @@ from src.crud.repositories.users import UserRepo
 from src.schemas.users import UserSchema, UpdateUser
 from fastapi.exceptions import HTTPException
 from src.core.security import create_password_hash
+from src.database.models import Users
 
 
 class UserService:
     def __init__(self, session: AsyncSession):
-        self.user_repo = UserRepo(session)
+        self.user_repo = UserRepo(session, Users)
 
     async def create_user(self, user: UserSchema):
         user.password = create_password_hash(user.password)
