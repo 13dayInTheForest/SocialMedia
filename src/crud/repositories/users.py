@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from .schemas import *
+from src.schemas.users import *
 from src.database.models import Users
 
 

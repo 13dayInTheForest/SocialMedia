@@ -1,8 +1,8 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from .repo import UserRepo
-from .schemas import UserSchema, UpdateUser
+from src.crud.repositories.users import UserRepo
+from src.schemas.users import UserSchema, UpdateUser
 from fastapi.exceptions import HTTPException
-from .security.utils import create_password_hash
+from src.core.security import create_password_hash
 
 
 class UserService:
