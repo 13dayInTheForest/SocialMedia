@@ -8,6 +8,7 @@ from .base import BaseService
 
 
 class PostService(BaseService):
-    pass
+    async def get(self, post: GetPosts):
+        return await self.repo.get_posts(post)
 
 

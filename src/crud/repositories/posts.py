@@ -1,6 +1,6 @@
 from .base import BaseRepo
 from sqlalchemy import select, desc
-from src.schemas.posts import PostsFilter
+from src.schemas.posts import GetPosts
 
 
 class PostsRepo(BaseRepo):
@@ -10,13 +10,13 @@ class PostsRepo(BaseRepo):
         )
         return posts.all()
 
-    async def get_posts(self, post_filter: PostsFilter, start: int, limit: int):
-        filters = post_filter.dict(exclude_unset=True)
+    async def get_posts(self, post: GetPosts):
+        filters = post.filter.dict(exclude_unset=True)
         result = await self.session.execute(
-            select(self.model).filter_by(**filters).limit(limit)
+            select(self.model).filter_by(**filters).limit(post.limit).offset(post.start)
         )
 
-        return result.all()
+        return result.scalars().all()
     #
     # async def get_most_liked_posts(self, max_posts: int):
     #     posts = await self.session.execute(
