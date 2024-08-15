@@ -32,6 +32,8 @@ class Posts(Base):
     text: Mapped[str | None] = mapped_column(String)
     file_url: Mapped[str | None] = mapped_column(String)
     user_id: Mapped[str] = mapped_column(Integer, ForeignKey('users.id', ondelete='CASCADE'))
+    category_id: Mapped[int] = mapped_column(Integer)
+    anonymously: Mapped[bool] = mapped_column(Boolean, default=False)
     published_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
     updated: Mapped[bool] = mapped_column(Boolean, default=False, onupdate=True)
     updated_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now(), onupdate=func.now())
@@ -59,4 +61,11 @@ class Likes(Base):
     post_id: Mapped[int] = mapped_column(Integer, ForeignKey('posts.id', ondelete='CASCADE'))
     entity: Mapped[int] = mapped_column(Integer)
     entity_id: Mapped[int] = mapped_column(Integer)
+
+
+class Categories(Base):
+    __tablename__ = 'categories'
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    name: Mapped[str] = mapped_column(String)
 

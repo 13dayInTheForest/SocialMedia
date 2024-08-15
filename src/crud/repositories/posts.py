@@ -1,4 +1,4 @@
-from base import BaseRepo
+from .base import BaseRepo
 from sqlalchemy import select, desc
 from src.schemas.posts import PostsFilter
 
@@ -10,9 +10,11 @@ class PostsRepo(BaseRepo):
         )
         return posts.all()
 
-    async def get_posts(self, post_filter: PostsFilter):
+    async def get_posts(self, post_filter: PostsFilter, start: int, limit: int):
         filters = post_filter.dict(exclude_unset=True)
-        result = await self.session.execute(select(self.model).filter_by(**filters))
+        result = await self.session.execute(
+            select(self.model).filter_by(**filters).limit(limit)
+        )
 
         return result.all()
     #
