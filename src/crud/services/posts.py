@@ -9,6 +9,10 @@ from .base import BaseService
 
 class PostService(BaseService):
     async def get(self, post: GetPosts):
-        return await self.repo.get_posts(post)
+        result = await self.repo.get_posts(post)
 
+        if result is None:
+            raise HTTPException(404, 'Nothing found')
+
+        return result
 
