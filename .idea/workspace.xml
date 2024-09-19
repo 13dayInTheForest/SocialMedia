@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bff71d5-94e3-4f31-b5b0-9aba67d9cac1" name="Changes" comment="change structure" />
+    <list default="true" id="6bff71d5-94e3-4f31-b5b0-9aba67d9cac1" name="Changes" comment="nothing">
+      <change afterPath="$PROJECT_DIR$/src/dependencies/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/v1/endpoints/posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/v1/endpoints/posts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/v1/endpoints/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/v1/endpoints/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/v1/endpoints/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/security.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/security.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crud/repositories/posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/crud/repositories/posts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/users.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,24 +55,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main (1).executor": "Run",
-    "Python.sand.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "/Users/amirnazirovor/PycharmProjects/SocialMedia",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.sand.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/amirnazirovor/PycharmProjects/SocialMedia&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/schemas" />
       <recent name="$PROJECT_DIR$/src/api/v1/endpoints" />
+      <recent name="$PROJECT_DIR$/src/schemas" />
       <recent name="$PROJECT_DIR$/src/crud/services" />
       <recent name="$PROJECT_DIR$/src/crud/repositories" />
       <recent name="$PROJECT_DIR$/src/core" />
@@ -174,7 +184,47 @@
       <option name="project" value="LOCAL" />
       <updated>1723451697207</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="change structure and add new Base class for all repositories">
+      <option name="closed" value="true" />
+      <created>1723470928818</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723470928818</updated>
+    </task>
+    <task id="LOCAL-00004" summary="nothing change">
+      <option name="closed" value="true" />
+      <created>1723557497085</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723557497085</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add base classes to repositories and services, and other stuff">
+      <option name="closed" value="true" />
+      <created>1723723980096</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723723980098</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add base classes to repositories and services, and other stuff">
+      <option name="closed" value="true" />
+      <created>1723727254250</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723727254250</updated>
+    </task>
+    <task id="LOCAL-00007" summary="nothing">
+      <option name="closed" value="true" />
+      <created>1723729014752</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723729014752</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +241,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change a lot of things" />
     <MESSAGE value="change structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="change structure" />
+    <MESSAGE value="change structure and add new Base class for all repositories" />
+    <MESSAGE value="nothing change" />
+    <MESSAGE value="add base classes to repositories and services, and other stuff" />
+    <MESSAGE value="nothing" />
+    <option name="LAST_COMMIT_MESSAGE" value="nothing" />
   </component>
 </project>

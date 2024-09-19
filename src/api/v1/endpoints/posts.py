@@ -15,21 +15,22 @@ async def create_post(post: CreatePosts, session: AsyncSession = Depends(get_ses
 
 
 @router.post('/get')
-async def get_posts(post: GetPosts, session: AsyncSession = Depends(get_session)):
+async def get_post(post: GetPosts, session: AsyncSession = Depends(get_session)):
     service = await create_posts_service(session)
     return await service.get(post)
 
 
 @router.patch('/update')
-async def create_post(post: CreatePosts, session: AsyncSession = Depends(get_session)):
+async def update_post(post: CreatePosts, session: AsyncSession = Depends(get_session)):
     service = await create_posts_service(session)
     return await service.create(post)
 
 
 @router.delete('/delete')
-async def create_post(post: CreatePosts, session: AsyncSession = Depends(get_session)):
+async def delete_post(post: CreatePosts,
+                      session: AsyncSession = Depends(get_session)):
     service = await create_posts_service(session)
-    return await service.create(post)
+    return await service.delete_by_id(post)
 
 
 

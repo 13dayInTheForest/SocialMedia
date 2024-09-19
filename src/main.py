@@ -1,4 +1,6 @@
-from fastapi import FastAPI
+import time
+from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
 from uvicorn import run
 from contextlib import asynccontextmanager
 from database.database import *
@@ -15,6 +17,15 @@ async def lifespan(app: FastAPI):
     yield
 
 app.router.lifespan_context = lifespan
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*']
+)
 
 
 @app.get('/')

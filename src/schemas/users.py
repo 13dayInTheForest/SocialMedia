@@ -5,8 +5,13 @@ from datetime import datetime
 class UserSchema(BaseModel):
     name: str
     password: str
-    bio: str
-    superuser: bool
+    bio: str = None
+    superuser: bool = False
+
+
+class UserAuth(BaseModel):
+    id: int
+    password: str
 
 
 class UpdateUser(BaseModel):
